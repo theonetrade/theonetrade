@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef, useMemo, useCallback } from "react";
+import { Fragment } from "react";
 
 export default function CaseStudy() {
   return (

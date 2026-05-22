@@ -2,7 +2,7 @@
 
 > AI trading systems engineered against second-order chaos.
 
-![screenshot](./screenshot.png)
+![screenshot](./assets/screenshot.png)
 
 ## Quick start
 

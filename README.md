@@ -1,6 +1,8 @@
 # TheOneTrade Landing
 
-> AI trading systems engineered against second-order chaos.
+> Published at [theonetrade.github.io/](theonetrade.github.io/)
+
+AI trading systems engineered against second-order chaos.
 
 ![screenshot](./assets/screenshot.png)
 

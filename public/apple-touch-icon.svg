@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
   <rect x="0" y="0" width="64" height="64" rx="10" fill="#0c1115" stroke="#1c252d" stroke-width="1"></rect>
   <polygon points="6,56 6,8 14,22 14,56" fill="#3a434d"></polygon>
+  <polygon points="6,56 14,56 14,50" fill="#19d1c6"></polygon>
   <polygon points="17,56 17,22 25,34 25,56" fill="#545f6a"></polygon>
-  <rect x="28" y="38" width="8" height="18" fill="#19d1c6"></rect>
+  <polygon points="17,56 25,56 25,40 17,48" fill="#19d1c6"></polygon>
+  <polygon points="28,56 36,56 36,35.5 28,39.5" fill="#19d1c6"></polygon>
   <polygon points="39,56 39,34 47,22 47,56" fill="#19d1c6"></polygon>
   <polygon points="50,56 50,22 58,8 58,56" fill="#0e7470"></polygon>
-  <polygon points="25,21 39,21 32,33" fill="#19d1c6"></polygon>
+  <polygon points="25,22.5 39,22.5 32,30.5" fill="#19d1c6"></polygon>
 </svg>

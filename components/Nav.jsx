@@ -14,25 +14,25 @@ export function Logo({ size = 28 }) {
         {/* 5 bars w=8, gap=3, padX=6. Staircase heights with strict 45° cuts (dx=dy=8).
             Bar1/5: y=12 (tallest) → Bar2/4: y=20 → Bar3: y=38 (shortest). */}
 
-        {/* Bar 1 — tallest, light. 45° inner diagonal: (6,12)→(14,20) dx=8 dy=8 */}
-        <polygon points="6,56 6,12 14,20 14,56"
+        {/* Bar 1 — tallest, light. 45° inner diagonal: (6,8)→(14,22) */}
+        <polygon points="6,56 6,8 14,22 14,56"
           fill="color-mix(in srgb, var(--text-1) 32%, transparent)" />
 
-        {/* Bar 2 — medium, gray. 45° inner diagonal: (17,20)→(25,28) dx=8 dy=8 */}
-        <polygon points="17,56 17,20 25,28 25,56"
+        {/* Bar 2 — medium, gray. 45° inner diagonal: (17,22)→(25,34) */}
+        <polygon points="17,56 17,22 25,34 25,56"
           fill="color-mix(in srgb, var(--text-1) 48%, transparent)" />
 
         {/* Bar 3 — short teal stem */}
         <rect x="28" y="38" width="8" height="18" fill="var(--teal)" />
 
-        {/* Bar 4 — teal, mirror of bar 2. 45°: (39,28)→(47,20) */}
-        <polygon points="39,56 39,28 47,20 47,56" fill="var(--teal)" />
+        {/* Bar 4 — teal, mirror of bar 2 */}
+        <polygon points="39,56 39,34 47,22 47,56" fill="var(--teal)" />
 
-        {/* Bar 5 — dark teal, mirror of bar 1. 45°: (50,20)→(58,12) */}
-        <polygon points="50,56 50,20 58,12 58,56" fill="var(--teal-deep)" />
+        {/* Bar 5 — dark teal, mirror of bar 1 */}
+        <polygon points="50,56 50,22 58,8 58,56" fill="var(--teal-deep)" />
 
-        {/* V triangle — top y=24 (between bars 2/4 diagonals), point y=36 */}
-        <polygon points="25,24 39,24 32,36" fill="var(--teal)" />
+        {/* V triangle */}
+        <polygon points="25,21 39,21 32,33" fill="var(--teal)" />
       </svg>
       <span style={{
         fontWeight: 600,

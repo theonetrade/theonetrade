@@ -1,6 +1,8 @@
 # TheOneTrade Landing
 
-AI trading systems engineered against second-order chaos.
+> AI trading systems engineered against second-order chaos.
+
+![screenshot](./screenshot.png)
 
 ## Quick start
 

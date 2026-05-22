@@ -102,12 +102,12 @@ export default function Simulator() {
 
         <div className="sim-grid" style={{
           display: "grid",
-          gridTemplateColumns: "320px 1fr",
+          gridTemplateColumns: "320px minmax(0, 1fr)",
           gap: 20,
         }}>
           {/* Controls */}
           <div className="term" data-label="PARAMETERS">
-            <div className="term-body" style={{ padding: 24 }}>
+            <div className="term-body sim-controls">
               <ControlGroup label="Strategy">
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   {Object.values(STRATEGIES).map((st) => (
@@ -173,9 +173,9 @@ export default function Simulator() {
               <span style={{ color: "var(--text-2)", fontSize: 10 }}>n={sim.trades} trades · {months}m</span>
             </div>
 
-            <div style={{
+            <div className="sim-stats" style={{
               display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
+              gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
               gap: 1,
               background: "var(--border)",
               borderBottom: "1px solid var(--border)",
@@ -217,8 +217,12 @@ export default function Simulator() {
       </div>
 
       <style>{`
+        #simulator .sim-controls { padding: 24px; }
+        #simulator input[type="range"] { box-sizing: border-box; min-width: 0; max-width: 100%; }
         @media (max-width: 900px) {
-          .sim-grid { grid-template-columns: 1fr !important; }
+          .sim-grid { grid-template-columns: minmax(0, 1fr) !important; }
+          #simulator .sim-controls { padding: 16px !important; }
+          #simulator .sim-stats { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
         }
       `}</style>
     </section>

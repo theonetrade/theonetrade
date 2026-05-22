@@ -54,9 +54,11 @@ export default function LLMReasoning() {
   const [activeId, setActiveId] = useState(REASONING_EVENTS[1].id);
   const active = REASONING_EVENTS.find(e => e.id === activeId);
   const [revealStep, setRevealStep] = useState(0);
+  const [idSuffix, setIdSuffix] = useState("");
 
   useEffect(() => {
     setRevealStep(0);
+    setIdSuffix(Math.floor(Math.random() * 9999).toString(16));
     const steps = [200, 600, 1100, 1700, 2200];
     const timers = steps.map((ms, i) => setTimeout(() => setRevealStep(i + 1), ms));
     return () => timers.forEach(clearTimeout);
@@ -122,7 +124,7 @@ export default function LLMReasoning() {
           <div className="term" data-label={`SignalOutline · ${active.asset}`} key={activeId}>
             <div className="term-head">
               <span style={{ color: "var(--text-0)" }}>{active.date}</span>
-              <span style={{ color: "var(--text-2)" }}>id: {active.id}-{Math.floor(Math.random() * 9999).toString(16)}</span>
+              <span style={{ color: "var(--text-2)" }} suppressHydrationWarning>id: {active.id}{idSuffix ? `-${idSuffix}` : ""}</span>
             </div>
 
             <div style={{ padding: "20px 24px" }}>

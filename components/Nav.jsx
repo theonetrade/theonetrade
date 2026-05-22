@@ -140,9 +140,9 @@ export default function Nav({ theme, onToggleTheme }) {
               display: "none",
             }}>
             <div style={{ display: "flex", flexDirection: "column", gap: 4, alignItems: "center", justifyContent: "center", height: "100%" }}>
-              <span style={{ width: 14, height: 1.5, background: "currentColor", display: "block" }}></span>
-              <span style={{ width: 14, height: 1.5, background: "currentColor", display: "block" }}></span>
-              <span style={{ width: 14, height: 1.5, background: "currentColor", display: "block" }}></span>
+              <span style={{ width: 14, height: 1, background: "currentColor", display: "block" }}></span>
+              <span style={{ width: 14, height: 1, background: "currentColor", display: "block" }}></span>
+              <span style={{ width: 14, height: 1, background: "currentColor", display: "block" }}></span>
             </div>
           </button>
         </div>

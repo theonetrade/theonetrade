@@ -48,10 +48,10 @@ export function Logo({ size = 28 }) {
 }
 
 export default function Nav({ theme, onToggleTheme }) {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -64,6 +64,7 @@ export default function Nav({ theme, onToggleTheme }) {
     { href: "#services", label: "Services" },
     { href: "#stack", label: "Stack" },
     { href: "#articles", label: "Research" },
+    { href: "https://backtest-kit.github.io/", label: "Documentation", external: true },
   ];
 
   return (
@@ -87,11 +88,14 @@ export default function Nav({ theme, onToggleTheme }) {
 
         <nav style={{
           display: "flex",
-          gap: 28,
+          gap: 22,
           alignItems: "center",
         }} className="nav-desktop">
           {links.map(l => (
-            <a key={l.href} href={l.href} style={{
+            <a key={l.href} href={l.href}
+              target={l.external ? "_blank" : undefined}
+              rel={l.external ? "noopener" : undefined}
+              style={{
               fontSize: 13,
               color: "var(--text-1)",
               transition: "color 120ms",
@@ -151,7 +155,10 @@ export default function Nav({ theme, onToggleTheme }) {
           padding: "16px var(--gutter) 24px",
         }}>
           {links.map(l => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} style={{
+            <a key={l.href} href={l.href}
+              target={l.external ? "_blank" : undefined}
+              rel={l.external ? "noopener" : undefined}
+              onClick={() => setOpen(false)} style={{
               display: "block",
               padding: "12px 0",
               fontSize: 15,
@@ -165,16 +172,15 @@ export default function Nav({ theme, onToggleTheme }) {
       )}
 
       <style>{`
-        @media (max-width: 880px) {
+        @media (max-width: 1024px) {
           .nav-desktop { display: none !important; }
           .nav-burger { display: grid !important; }
           .nav-cta span, .nav-cta { display: none; }
         }
-        @media (min-width: 881px) {
+        @media (min-width: 1025px) {
           .nav-mobile-menu { display: none !important; }
         }
       `}</style>
     </header>
   );
 }
-
